@@ -73,13 +73,13 @@ msgstr ""
 #: code:addons/stock/stock.py:1851
 #, python-format
 msgid " (%s reserved)"
-msgstr " (%s 被预留）"
+msgstr " (%s 已打包）"
 
 #. module: stock
 #: code:addons/stock/stock.py:1854
 #, python-format
 msgid " (reserved)"
-msgstr "（被预留）"
+msgstr "（已打包）"
 
 #. module: stock
 #: code:addons/stock/stock.py:3493
@@ -91,25 +91,25 @@ msgstr "按订单补货（MTO）"
 #: code:addons/stock/product.py:209 code:addons/stock/product.py:382
 #, python-format
 msgid " On Hand"
-msgstr "在手"
+msgstr "实际库存"
 
 #. module: stock
 #: code:addons/stock/stock.py:3630 code:addons/stock/stock.py:3923
 #, python-format
 msgid " Sequence in"
-msgstr "导入序列号"
+msgstr "入库序列号"
 
 #. module: stock
 #: code:addons/stock/stock.py:3634 code:addons/stock/stock.py:3931
 #, python-format
 msgid " Sequence internal"
-msgstr "内部序列号"
+msgstr "内部移动序列号"
 
 #. module: stock
 #: code:addons/stock/stock.py:3631 code:addons/stock/stock.py:3925
 #, python-format
 msgid " Sequence out"
-msgstr "导出序列号"
+msgstr "出库序列号"
 
 #. module: stock
 #: code:addons/stock/stock.py:3632 code:addons/stock/stock.py:3927
@@ -121,7 +121,7 @@ msgstr "包装序列号"
 #: code:addons/stock/stock.py:3633 code:addons/stock/stock.py:3929
 #, python-format
 msgid " Sequence picking"
-msgstr "分拣序列号"
+msgstr "出库序列号"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_move_picking_form
@@ -215,7 +215,7 @@ msgstr "，如果会计模块或采购模块已安装"
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.inventory_planner
 msgid "- The Odoo Team"
-msgstr "- Odoo团队"
+msgstr "- Oso团队"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.inventory_planner
@@ -232,7 +232,7 @@ msgid ""
 "class=\"fa fa-truck\"/> Delivery</span>"
 msgstr ""
 "<span class=\"label label-default text-center odoo_purple\">点击 <span class="
-"\"fa fa-truck\"/> 出货</span>"
+"\"fa fa-truck\"/> 出库</span>"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.inventory_planner
@@ -996,7 +996,7 @@ msgstr "调出确认"
 #: selection:stock.move,state:0 selection:stock.pack.operation,state:0
 #: selection:stock.picking,state:0
 msgid "Available"
-msgstr "可用"
+msgstr "已打包"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.product_template_search_form_view_stock
@@ -2259,7 +2259,7 @@ msgid ""
 "Otherwise, this includes goods stored in any Stock Location with 'internal' "
 "type."
 msgstr ""
-"预计数量(计算方法：在手数量-将要出库的数量+将要入库的数量)\n"
+"预计数量(计算方法：现货数量-将要出库的数量+将要入库的数量)\n"
 "对于一个库位来说，这包括了将要到达此库位或其子库位的产品。\n"
 "对于一个仓库来所，这包括了将要到达这个仓库的的这个库位,或其子库位的产品。\n"
 "对于一个门店来所，这包括了将要到达这个门店的仓库的的这个库位或其子库位的产"
@@ -3768,7 +3768,7 @@ msgstr "新建"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_change_product_qty_new_quantity
 msgid "New Quantity on Hand"
-msgstr "新的在手数量"
+msgstr "新的现货数量"
 
 #. module: stock
 #: model:ir.actions.act_window,name:stock.action_picking_form
@@ -3952,7 +3952,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:stock.product_form_view_procurement_button
 #: model:ir.ui.view,arch_db:stock.product_template_form_view_procurement_button
 msgid "On Hand"
-msgstr "在手"
+msgstr "现货数量"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.inventory_planner
@@ -3962,7 +3962,7 @@ msgstr "现货/可用数量"
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.product_template_kanban_stock_view
 msgid "On hand:"
-msgstr "在手："
+msgstr "现货数量："
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.inventory_planner
@@ -4857,7 +4857,7 @@ msgstr "补货基数"
 #: model:ir.model.fields,field_description:stock.field_product_product_qty_available
 #: model:ir.model.fields,field_description:stock.field_product_template_qty_available
 msgid "Quantity On Hand"
-msgstr "在手数量"
+msgstr "现货数量"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move_reserved_availability
@@ -5151,7 +5151,7 @@ msgstr "人工为销售订单保留产品或通过运行计划"
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_move_picking_form
 msgid "Reserved"
-msgstr "保留"
+msgstr "已打包"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move_operation_link_reserved_quant_id
@@ -6578,7 +6578,7 @@ msgstr "更新产品数量"
 #: model:ir.ui.view,arch_db:stock.product_product_view_form_easy_inherit_stock
 #: model:ir.ui.view,arch_db:stock.product_template_form_view_procurement_button
 msgid "Update Qty On Hand"
-msgstr "更新在手数量"
+msgstr "更新现货数量"
 
 #. module: stock
 #: selection:stock.move,priority:0 selection:stock.picking,priority:0
@@ -6962,7 +6962,7 @@ msgid ""
 "quantity."
 msgstr ""
 "你可以定义最小库存规则，以便系统根据库存水平自动创建生产单或询价单。一旦一个"
-"产品的虚拟库存 (虚拟库存= 在手数量 - 已确认的订单和预留数量) 低于最小数量，系"
+"产品的虚拟库存 (虚拟库存= 现货数量 - 已确认的订单和预留数量) 低于最小数量，系"
 "统将生成补货单以增加库存到最大数量。"
 
 #. module: stock
